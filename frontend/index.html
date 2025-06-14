@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality</title>
+    <meta name="description" content="Papelería e imprenta profesional. Ofrecemos servicios de impresión, diseño gráfico, material de oficina y más.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="font-sans bg-gray-50">
+   <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600">
+                    <img src="img/quality.png" alt="Logo quality" class="h-19">
+                </a>
+            </div>
+            
+            <!-- Menú principal - Desktop -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#servicios" class="text-gray-800 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#productos" class="text-gray-800 hover:text-blue-600 font-medium">Productos</a>
+                <a href="#nosotros" class="text-gray-800 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="#contacto" class="text-gray-800 hover:text-blue-600 font-medium">Contacto</a>
+            </nav>
+            
+            <!-- Botones de acción -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:+528281188792" class="flex items-center text-gray-700 hover:text-blue-600">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>828 118 8792</span>
+                </a>
+                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Cotizar
+                </a>
+            </div>
+            
+            <!-- Menú móvil - Botón -->
+            <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Menú móvil - Contenido -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#servicios" class="text-gray-800 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#productos" class="text-gray-800 hover:text-blue-600 font-medium">Productos</a>
+                <a href="#nosotros" class="text-gray-800 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="#contacto" class="text-gray-800 hover:text-blue-600 font-medium">Contacto</a>
+                <a href="tel:+528122613422" class="flex items-center text-gray-700 hover:text-blue-600">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>812 261 3422</span>
+                </a>
+                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
+                    Cotizar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-500 to-blue-700 text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Soluciones integrales en Quality</h1>
+                <p class="text-xl mb-8">Calidad, rapidez y atención personalizada para todos tus proyectos de impresión y papelería.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#servicios" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition text-center">
+                        Nuestros Servicios
+                    </a>
+                    <a href="#contacto" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition text-center">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="img/imprenta1.jpg" alt="Servicios de imprenta" class="rounded-lg shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Ofrecemos una amplia gama de servicios para satisfacer todas tus necesidades de papelería e impresión.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Impresión Digital</h3>
+                        <p class="text-gray-600 text-justify">Impresión de alta calidad en diferentes tipos de papel, tamaños y acabados para todo tipo de proyectos.</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-6xl text-green-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Diseño Gráfico</h3>
+                        <p class="text-gray-600 text-justify">Creación de logotipos, folletos, tarjetas de presentación y material publicitario profesional.</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-box-open text-6xl text-yellow-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Material de Oficina</h3>
+                        <p class="text-gray-600 text-justify">Venta de artículos de papelería, útiles escolares y suministros de oficina de las mejores marcas.</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-book text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Encuadernación</h3>
+                        <p class="text-gray-600 text-justify">Servicios profesionales de encuadernación para tesis, reportes, catálogos y más.</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 5 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-stamp text-6xl text-red-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sellos y Timbres</h3>
+                        <p class="text-gray-600 text-justify">Fabricación de sellos automáticos, manuales y timbres de hule con entrega rápida.</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 6 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-gift text-6xl text-indigo-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Artículos Promocionales</h3>
+                        <p class="text-gray-600 text-justify">Personalización de artículos como playeras, tazas, llaveros y más para promociones empresariales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Productos Destacados</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Los artículos más solicitados por nuestros clientes.</p>
+            </div>
+            
+            <!-- Carrusel Container -->
+<div class="relative overflow-hidden group" id="carrusel-contenedor">
+    <!-- Slides Container -->
+    <div id="productos-carrusel" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Slide 1 -->
+        <div class="w-full flex-shrink-0 px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/tarjeta-presentacion.jpg" alt="Tarjetas de presentación" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Tarjetas de Presentación</h3>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/volantes.jpg" alt="Volantes" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Volantes Publicitarios</h3>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/bordado.jpg" alt="Artículos de oficina" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Bordado</h3>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/reconocimientos.jpg" alt="Playeras personalizadas" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Reconocimientos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="w-full flex-shrink-0 px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/material-escolar.jpg" alt="Material Escolar" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Material Escolar</h3>
+                    </div>
+                </div>
+                <!-- Producto 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/colores.png" alt="Colores" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Colores</h3>
+                    </div>
+                </div>
+                <!-- Producto 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/impresion-digital.jpg" alt="Impresión Digital" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Impresión Digital</h3>
+                    </div>
+                </div>
+                <!-- Producto 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/sellos-personalizados.jpg" alt="Sellos Personalizados" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sellos Personalizados</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="w-full flex-shrink-0 px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 9 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/disenografico.jpg" alt="Diseño Gráfico" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Diseño Gráfico</h3>
+                    </div>
+                </div>
+                <!-- Producto 10 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/impresion-laser.jpg" alt="Impresión Láser" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Impresión Láser</h3>
+                    </div>
+                </div>
+                <!-- Producto 11 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/listones.jpg" alt="Cajas de Regalo" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Listones</h3>
+                    </div>
+                </div>
+                <!-- Producto 12 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/flores.jpg" alt="Mochilas" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Flores Eternas</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="w-full flex-shrink-0 px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 13 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/tramites.jpg" alt="Trámites" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Trámites</h3>
+                    </div>
+                </div>
+                <!-- Producto 14 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/invitaciones.png" alt="Invitaciones" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Invitaciones</h3>
+                    </div>
+                </div>
+                <!-- Producto 15 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/pulseras-personalizadas.jpg" alt="Escaneo Documentos" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Pulseras Personalizadas</h3>
+                    </div>
+                </div>
+                <!-- Producto 16 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="img/letreros.jpg" alt="Letreros" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Letreros</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <button id="carrusel-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow-md transition opacity-0 group-hover:opacity-100">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="carrusel-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow-md transition opacity-0 group-hover:opacity-100">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="flex justify-center mt-6 space-x-2">
+        <button class="carrusel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 transition" data-index="0"></button>
+        <button class="carrusel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 transition" data-index="1"></button>
+        <button class="carrusel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 transition" data-index="2"></button>
+        <button class="carrusel-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 transition" data-index="3"></button>
+    </div>
+</div>
+            
+        
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre Nosotros</h2>
+                    <p class="text-gray-600 mb-4">En quality somos una papelería e imprenta con más de 10 años de experiencia en el mercado, ofreciendo soluciones integrales para empresas, escuelas y público en general.</p>
+                    <p class="text-gray-600 mb-4">Nuestro compromiso es brindar productos de calidad, tiempos de entrega rápidos y atención personalizada para cada uno de nuestros clientes.</p>
+                    <p class="text-gray-600 mb-6">Contamos con tecnología de punta y personal capacitado para asesorarte en tus proyectos de impresión y papelería.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Calidad garantizada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Precios competitivos</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Entrega puntual</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-200 h-96 rounded-lg overflow-hidden">
+                        <img src="img/local.jpg" alt="Nuestro equipo" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contáctanos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Estamos listos para atender tus necesidades.</p>
+            </div>
+            
+<div class="flex flex-col md:flex-row gap-8 items-start">
+    <!-- Formulario -->
+    <div class="md:w-1/2 w-full">
+        <form action="https://formsubmit.co/contabilidadlet17@gmail.com" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="📩 Nuevo mensaje de contacto desde Quality">
+            <input type="hidden" name="_next" value="https://cadereytaquality.com/gracias.html">
+
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                <input type="text" name="name" id="nombre" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="telefono" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                <input type="text" name="telefono" id="telefono" placeholder="Ej. 8281234567" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="servicio" class="block text-gray-700 font-medium mb-2">Servicio de interés</label>
+                <select name="servicio" id="servicio" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Impresión Digital">Impresión Digital</option>
+                    <option value="Diseño Gráfico">Diseño Gráfico</option>
+                    <option value="Artículos de Papelería">Artículos de Papelería</option>
+                    <option value="Encuadernación">Encuadernación</option>
+                    <option value="Sellos y Timbres">Sellos y Timbres</option>
+                    <option value="Artículos Promocionales">Artículos Promocionales</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="mensaje" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                <textarea name="comments" id="mensaje" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+                Enviar Mensaje
+            </button>
+        </form>
+    </div>
+
+    <!-- Información de contacto a la derecha -->
+    <div class="md:w-1/2 w-full">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-map-marker-alt text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Dirección</h4>
+                        <p class="text-gray-600">Josefa Ortiz de Domínguez 608 sur, 67480 Cadereyta Jiménez, N.L.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-phone-alt text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Teléfonos</h4>
+                        <p class="text-gray-600">828 118 8792<br>812 261 3422<br>813 912 6946</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-envelope text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Correo Electrónico</h4>
+                        <p class="text-gray-600">contabilidadlet17@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-clock text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Horario de Atención</h4>
+                        <p class="text-gray-600">Lunes a Viernes: 6:30 am - 10:00 pm<br>Sábados: 8:00 am - 8:00 pm<br>Domingos: 9:00 am - 8:00 pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Visitanos En nuestras Diferentes Sucursales</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Estamos listos para atender tus necesidades.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+        <!-- Mapa 1 -->
+       <div class="h-64 md:h-96 group rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44307.66726662872!2d-100.07113397832028!3d25.5852286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662db0b36b88e97%3A0xf4166e27ccd936c1!2sPapeleria%20quality!5e0!3m2!1ses!2smx&maptype=roadmap" width="100%" height="100%" class="group-hover:brightness-95 transition-all duration-300" style="border:0;"allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <!-- Mapa 2 -->
+        <div class="h-64 md:h-96 group rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44307.66726662872!2d-100.07113397832028!3d25.5852286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662db13fa5ac6af%3A0xc55956080a235b6d!2sQuality%20Globos%20y%20Regalos!5e0!3m2!1ses!2smx!4v1749005008573!5m2!1ses!2smx&maptype=roadmap" width="100%" height="100%" class="group-hover:brightness-95 transition-all duration-300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <!-- Mapa 3 -->
+        <div class="h-64 md:h-96 group rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44307.66726662872!2d-100.07113397832028!3d25.5852286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662db2f4aa907a9%3A0x50ef6d0147d4a5c7!2sQuality%20Lopez%20Mateos!5e0!3m2!1ses!2smx&maptype=roadmap" width="100%" height="100%" class="group-hover:brightness-95 transition-all duration-300" style="border:0;"allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+        <!-- Ubicaciones -->
+        <!-- 1 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Plazuela</h2>
+        
+        <!-- 2 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Centro</h2>
+
+        <!-- 3 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">López</h2>
+        
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Columna 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quality</h3>
+                    <p class="text-gray-400">Soluciones integrales en papelería y servicios de impresión con la más alta calidad y atención personalizada.</p>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Conoce más</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition">Servicios</a></li>
+                        <li><a href="#productos" class="text-gray-400 hover:text-white transition">Productos</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Impresión Digital</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diseño Gráfico</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Material de Oficina</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Encuadernación</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Artículos Promocionales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tel:+528281188792" class="flex items-center text-gray-400 hover:text-white transition hover:text-blue-600">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>828 118 8792</span></a></li>
+                        <li><a href="tel:+52813912694" class="flex items-center text-gray-400 hover:text-white transition hover:text-blue-600">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>813 912 694</span></a></li>
+                        <li><a href="" class="text-gray-400 hover:text-white transition">contabilidadlet17@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2025 Papelería e Imprenta Quality. | Desarrollado por Johan Ramírez | Juan Luna | Todos los derechos reservados CADETEK
+                </p>
+                <!-- Botones -->
+                <div class="flex space-x-6">
+                    <button onclick="openModal('terms')" class="text-gray-400 hover:text-white transition">
+                        Términos y Condiciones
+                    </button>
+                    <button onclick="openModal('privacy')" class="text-gray-400 hover:text-white transition">
+                        Política de Calidad
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 p-4">
+                <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 id="modal-title" class="text-xl font-bold text-gray-800"></h3>
+                            <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                                ✕
+                            </button>
+                        </div>
+                        <div id="modal-content" class="text-gray-600"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/528281188792" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+</body>
+<!-- Botón flotante del chatbot -->
+<button id="bot-btn" class="fixed bottom-32 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 z-50">
+  <i class="fas fa-robot text-xl"></i>
+</button>
+
+<!-- Caja del chatbot -->
+<!-- Caja del chatbot -->
+<div id="chatbot-box" class="fixed bottom-28 right-6 w-80 bg-white shadow-xl rounded-lg p-6 pt-10 hidden z-50">
+  <button id="cerrar-chatbot" class="absolute top-2 right-2 text-gray-400 hover:text-red-500 text-lg font-bold focus:outline-none z-10">
+    ×
+  </button>
+  <h4 class="text-lg font-bold text-gray-800 mb-2">Hola 👋</h4>
+  <p class="text-sm text-gray-700 mb-4">Escribe tu pregunta:</p>
+
+  <div class="flex mb-2">
+    <input id="chat-input" type="text" placeholder="Ej. ¿Qué servicios ofrecen?" class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg focus:outline-none">
+    <button id="enviar-btn" class="bg-blue-600 text-white px-4 rounded-r-lg hover:bg-blue-700">Enviar</button>
+  </div>
+
+  <div id="respuesta" class="mt-2 text-gray-700 text-sm min-h-[60px]"></div>
+</div>
+
+
+<!-- Script del chatbot -->
+<script src="js/chatbot.js" defer></script>
+
+
+</html>
