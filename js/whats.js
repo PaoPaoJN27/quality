@@ -1,7 +1,7 @@
 
 (() => {
   const PHONE = "528281188792"; // MX sin '+'
-  const PUBLIC_BASE_URL = "https://cadereytaquality.com/"; // ✅ dominio real (termina con /)
+  const PUBLIC_BASE_URL = "https://paopaojn27.github.io/quality/";// ✅ dominio real (termina con /)
   let lastOpen = 0;
 
   const isHttp = (u) => /^https?:\/\//i.test(u);
