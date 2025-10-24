@@ -83,3 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
     return 'Lo siento, no entendí tu pregunta. ¿Podrías reformularla o consultar nuestra sección de contacto?';
   }
 });
+
