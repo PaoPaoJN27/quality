@@ -1,7 +1,6 @@
-
 (() => {
   const PHONE = "528281188792"; // MX sin '+'
-  const PUBLIC_BASE_URL = "https://paopaojn27.github.io/quality/img/promocion/";// ✅ dominio real (termina con /)
+  const PUBLIC_BASE_URL = "https://paopaojn27.github.io/quality/img/promocion/"; // ✅ dominio real (termina con /)
   let lastOpen = 0;
 
   const isHttp = (u) => /^https?:\/\//i.test(u);
@@ -18,6 +17,7 @@
   const BASE_MESSAGE =
     "Hola 👋, me interesa la promoción *{nombre}*. ¿Podrían darme más información y ejemplos?";
 
+  // === Opción A: abrir WhatsApp EN LA MISMA PESTAÑA ===
   function openWhatsApp(nombrePromo, imgSrc = "") {
     const now = Date.now();
     if (now - lastOpen < 900) return; // evita doble clic rápido
@@ -28,19 +28,9 @@
     const text = imgUrl ? `${msg}\n${imgUrl}` : msg;
     const t = encodeURIComponent(text);
 
-    const urls = [
-      `https://api.whatsapp.com/send?phone=${PHONE}&text=${t}`,
-      `https://web.whatsapp.com/send?phone=${PHONE}&text=${t}`,
-      `https://wa.me/${PHONE}?text=${t}`,
-    ];
-
-    for (const u of urls) {
-      try {
-        const w = window.open(u, "_blank", "noopener,noreferrer");
-        if (w) return;
-      } catch {}
-    }
-    window.location.href = urls[0];
+    // usamos wa.me directamente en la misma pestaña
+    const url = `https://wa.me/${PHONE}?text=${t}`;
+    window.location.assign(url);
   }
 
   // ===== Carrusel =====
@@ -78,6 +68,9 @@
 
   // Click en slide → usa nombre + URL absoluta de imagen
   $slides.forEach(slide => {
+    // Asegura que un <button> no haga submit si estuviera dentro de un <form>
+    try { slide.setAttribute("type", "button"); } catch {}
+
     const handler = () => {
       const nombre =
         slide.querySelector("span")?.innerText?.trim() ||
@@ -86,9 +79,19 @@
       const imgSrc = slide.querySelector("img")?.getAttribute("src") || "";
       openWhatsApp(nombre, imgSrc);
     };
-    slide.addEventListener("click", handler);
-    slide.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handler(); }
+
+    slide.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      handler();
+    });
+
+    slide.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        e.stopPropagation();
+        handler();
+      }
     });
   });
 
@@ -108,3 +111,7 @@
   goTo(0);
   start();
 })();
+
+  
+
+
