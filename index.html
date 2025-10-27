@@ -10,6 +10,7 @@
   <script src="js/main.js" defer></script>
 </head>
 
+
 <body class="font-sans bg-gray-50">
   <!-- Header/Navbar -->
   <header class="bg-white shadow-md sticky top-0 z-50">
@@ -92,7 +93,7 @@
     <!-- Carrusel: alineado a la derecha y centrado verticalmente como la imagen anterior -->
     <div class="w-full md:w-5/12 lg:w-5/12 flex justify-center md:justify-end mt-6 md:mt-0 md:mr-8 lg:mr-28 xl:mr-36">
       <div id="hero-carousel"
-           class="relative w-full max-w-[280px] lg:max-w-[260px] xl:max-w-[280px] 2xl:max-w-[300px]
+           class="relative w-full max-w-[300px] lg:max-w-[260px] xl:max-w-[280px] 2xl:max-w-[340px]
                   h-[380px] md:h-[400px] lg:h-[420px] xl:h-[440px] 2xl:h-[460px]
                   rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-b from-blue-800/30 to-blue-900/40 p-2"
            role="region" aria-label="Promociones Quality">
@@ -114,7 +115,7 @@
                style="transform: translateX(0%);">
 
             <!-- Slides -->
-            <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
+           <!-- <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
                     data-img="img/promocion/1.jpg"
                     data-msg="Hola 👋, me interesa la promoción *DTF Textil — $350 m/l (58 cm)*. ¿Me comparten más información?">
               <img src="img/promocion/1.jpg" alt="DTF Textil $350 m/l (58 cm)"
@@ -125,78 +126,95 @@
                 </span>
               </div>
             </button>
+            -->
 
-            <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
-                    data-img="img/promocion/2.jpg"
-                    data-msg="Hola 👋, me interesa la promo *Cama Plana UV — $500 hoja 1.2×2.4 m*. ¿Detalles de materiales y tiempos?">
-              <img src="img/promocion/2.jpg" alt="Cama Plana UV $500 hoja 1.2×2.4 m"
-                   class="w-full h-full object-cover rounded-xl shadow-md">
-              <div class="absolute left-3 bottom-3">
-                <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                  Cama Plana UV — $500 hoja 1.2×2.4 m
-                </span>
-              </div>
-            </button>
+            <button
+                class="hero-slide w-full h-full basis-full grow-0 shrink-0 relative focus:outline-none
+                      flex items-center justify-center cursor-pointer"
+                data-img="img/promocion/Cama plana.jpg"
+                data-msg="Hola 👋, me interesa la promo *Cama Plana UV — $500 hoja 1.2×2.4 m*. ¿Detalles de materiales y tiempos?">
+                <img
+                  src="img/promocion/Cama plana.jpg"
+                  alt="Cama Plana UV $500 hoja 1.2×2.4 m"
+                  class="w-full h-full object-cover object-[50%_10%] rounded-xl shadow-md"
+                  draggable="false" />
+                <div class="absolute left-3 bottom-3">
+                 <!-- <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
+                    Cama Plana UV — $500 hoja 1.2×2.4 m
+                  </span>-->
+                </div>
+              </button>
+
 
             <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
                     data-img="img/promocion/3.jpg"
                     data-msg="Hola 👋, me interesa *DTF Ultra Violeta — $400 m/l (stickers sin fondo)*. ¿Me apoyan con info y muestras?">
-              <img src="img/promocion/3.jpg" alt="DTF Ultra Violeta $400 m/l"
+              <img src="img/promocion/DTF ultra violeta.jpg" alt="DTF Ultra Violeta $400 m/l"
                    class="w-full h-full object-cover rounded-xl shadow-md">
               <div class="absolute left-3 bottom-3">
-                <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
+                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
                   DTF Ultra Violeta — $400 m/l
-                </span>
+                </span>-->
               </div>
             </button>
 
             <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
                     data-img="img/promocion/4.jpg"
                     data-msg="Hola 👋, me interesan las promos de *Copias B/N, Bordados y Grabado Láser*. ¿Me comparten precios y tiempos?">
-              <img src="img/promocion/4.jpg" alt="Copias B/N, Bordados, Grabado Láser"
+              <img src="img/promocion/Copias.jpg" alt="Copias B/N, Bordados, Grabado Láser"
                    class="w-full h-full object-cover rounded-xl shadow-md">
               <div class="absolute left-3 bottom-3">
-                <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
+                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
                   Copias B/N • Bordados • Láser
-                </span>
+                </span>-->
               </div>
             </button>
 
             <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
                     data-img="img/promocion/5.jpg"
                     data-msg="Hola 👋, me interesa *Banderas 3 m — $600*. ¿Modelos disponibles y tiempos de entrega?">
-              <img src="img/promocion/5.jpg" alt="Banderas 3 m $600"
+              <img src="img/promocion/Banderas.jpg" alt="Banderas 3 m $600"
                    class="w-full h-full object-cover rounded-xl shadow-md">
               <div class="absolute left-3 bottom-3">
-                <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
+                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
                   Banderas 3 m — $600
-                </span>
+                </span>-->
               </div>
             </button>
 
             <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
                     data-img="img/impresion-digital.jpg"
                     data-msg="Hola 👋, me interesa *DTF Textil — $200 m/l*. ¿Requisitos del archivo y acabados disponibles?">
-              <img src="img/promocion/6.jpg" alt="DTF Textil $200 m/l"
+              <img src="img/promocion/DTF textil.jpg" alt="DTF Textil $200 m/l"
                    class="w-full h-full object-cover rounded-xl shadow-md">
               <div class="absolute left-3 bottom-3">
-                <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
+                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
                   DTF Textil — $200 m/l
-                </span>
+                </span>-->
               </div>
             </button>
 
           </div>
 
           <!-- Controles -->
-          <button id="hero-prev"
-                  class="absolute left-3 top-1/2 -translate-y-1/2 bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow ring-1 ring-black/10 hover:scale-105 transition">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button id="hero-next"
-                  class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow ring-1 ring-black/10 hover:scale-105 transition">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+<button id="hero-prev"
+        class="absolute left-3 top-1/2 -translate-y-1/2 
+               bg-white/80 hover:bg-white/90 text-gray-800 
+               w-9 h-9 rounded-full flex items-center justify-center 
+               shadow-sm ring-1 ring-black/10 
+               transition-opacity duration-300 opacity-80">
+  <i class="fas fa-chevron-left"></i>
+</button>
+
+<button id="hero-next"
+        class="absolute right-3 top-1/2 -translate-y-1/2 
+               bg-white/80 hover:bg-white/90 text-gray-800 
+               w-9 h-9 rounded-full flex items-center justify-center 
+               shadow-sm ring-1 ring-black/10 
+               transition-opacity duration-300 opacity-80">
+  <i class="fas fa-chevron-right"></i>
+</button>
+
         </div>
 
         <!-- Dots -->
