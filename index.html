@@ -67,9 +67,8 @@
     </div>
   </header>
 
-  <!-- Hero Section - Carrusel en la misma posición que la imagen anterior -->
+  <!-- Hero Section - Carrusel al alto natural de las imágenes -->
 <section class="bg-gradient-to-r from-purple-500 to-blue-700 text-white py-4 md:py-10">
-  <!-- items-center en md+ para centrar verticalmente; mismas columnas pero con más ancho al texto -->
   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-6">
 
     <!-- Texto -->
@@ -79,142 +78,81 @@
         Calidad, rapidez y atención personalizada para todos tus proyectos de impresión y papelería.
       </p>
       <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-        <a href="#servicios"
-           class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition text-center">
-          Nuestros Servicios
-        </a>
-        <a href="#contacto"
-           class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition text-center">
-          Contáctanos
-        </a>
+        <a href="#servicios" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition text-center">Nuestros Servicios</a>
+        <a href="#contacto" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition text-center">Contáctanos</a>
       </div>
     </div>
 
-    <!-- Carrusel: alineado a la derecha y centrado verticalmente como la imagen anterior -->
+    <!-- Carrusel (se ajusta al tamaño real de la imagen) -->
     <div class="w-full md:w-5/12 lg:w-5/12 flex justify-center md:justify-end mt-6 md:mt-0 md:mr-8 lg:mr-28 xl:mr-36">
       <div id="hero-carousel"
-           class="relative w-full max-w-[300px] lg:max-w-[260px] xl:max-w-[280px] 2xl:max-w-[340px]
-                  h-[380px] md:h-[400px] lg:h-[420px] xl:h-[440px] 2xl:h-[460px]
+           class="relative w-full max-w-[300px] md:max-w-[300px] xl:max-w-[300px]
                   rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-b from-blue-800/30 to-blue-900/40 p-2"
            role="region" aria-label="Promociones Quality">
 
-        <!-- SELLO: sticker blanco translúcido -->
-<div class="absolute -top-3 -right-3 z-20 pointer-events-none select-none
-            h-16 w-16 md:h-20 md:w-20 rounded-full
-            bg-white/70 backdrop-blur-sm
-            shadow-xl ring-2 ring-white/60 flex items-center justify-center rotate-[-8deg]">
-  <span class="text-[10px] md:text-xs font-extrabold text-blue-800 leading-tight text-center">
-    PROMO<br>ESPECIAL
-  </span>
-</div>
+        <!-- Sello -->
+        <div class="absolute -top-3 -right-3 z-20 pointer-events-none select-none
+                    h-16 w-16 md:h-20 md:w-20 rounded-full bg-white/70 backdrop-blur-sm
+                    shadow-xl ring-2 ring-white/60 flex items-center justify-center rotate-[-8deg]">
+          <span class="text-[10px] md:text-xs font-extrabold text-blue-800 leading-tight text-center">
+            PROMO<br>ESPECIAL
+          </span>
+        </div>
 
-        <!-- Viewport -->
-        <div class="relative w-full h-full rounded-2xl overflow-hidden">
-          <!-- Track -->
-          <div id="hero-track" class="absolute inset-0 flex transition-transform duration-500 ease-out"
-               style="transform: translateX(0%);">
+        <!-- Viewport (alto automático) -->
+        <div class="relative w-full rounded-2xl overflow-hidden">
+          <!-- Track (sin absolute, para que la altura sea la de la imagen) -->
+          <div id="hero-track" class="relative flex transition-transform duration-500 ease-out" style="transform: translateX(0%);">
 
-            <!-- Slides -->
-           <!-- <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
-                    data-img="img/promocion/1.jpg"
-                    data-msg="Hola 👋, me interesa la promoción *DTF Textil — $350 m/l (58 cm)*. ¿Me comparten más información?">
-              <img src="img/promocion/1.jpg" alt="DTF Textil $350 m/l (58 cm)"
-                   class="w-full h-full object-cover rounded-xl shadow-md">
-              <div class="absolute left-3 bottom-3">
-                <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                  DTF Textil — $350 m/l (58 cm)
-                </span>
-              </div>
+            <!-- Slide 1 -->
+            <button class="hero-slide w-full flex-none relative focus:outline-none flex items-center justify-center cursor-pointer"
+                    data-img="img/promocion/Cama plana.jpg"
+                    data-msg="Hola 👋, me interesa la promo *Cama Plana UV — $500 hoja 1.2×2.4 m*. ¿Detalles de materiales y tiempos?">
+              <img src="img/promocion/Cama plana.jpg" alt="Cama Plana UV $500 hoja 1.2×2.4 m"
+                   class="block w-full h-auto object-contain object-center rounded-xl shadow-md bg-white/10"
+                   draggable="false" />
             </button>
-            -->
 
-            <button
-                class="hero-slide w-full h-full basis-full grow-0 shrink-0 relative focus:outline-none
-                      flex items-center justify-center cursor-pointer"
-                data-img="img/promocion/Cama plana.jpg"
-                data-msg="Hola 👋, me interesa la promo *Cama Plana UV — $500 hoja 1.2×2.4 m*. ¿Detalles de materiales y tiempos?">
-                <img
-                  src="img/promocion/Cama plana.jpg"
-                  alt="Cama Plana UV $500 hoja 1.2×2.4 m"
-                  class="w-full h-full object-cover object-[50%_10%] rounded-xl shadow-md"
-                  draggable="false" />
-                <div class="absolute left-3 bottom-3">
-                 <!-- <span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                    Cama Plana UV — $500 hoja 1.2×2.4 m
-                  </span>-->
-                </div>
-              </button>
-
-
-            <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
-                    data-img="img/promocion/3.jpg"
+            <!-- Slide 2 -->
+            <button class="hero-slide w-full flex-none relative focus:outline-none flex items-center justify-center cursor-pointer"
+                    data-img="img/promocion/DTF ultra violeta.jpg"
                     data-msg="Hola 👋, me interesa *DTF Ultra Violeta — $400 m/l (stickers sin fondo)*. ¿Me apoyan con info y muestras?">
               <img src="img/promocion/DTF ultra violeta.jpg" alt="DTF Ultra Violeta $400 m/l"
-                   class="w-full h-full object-cover rounded-xl shadow-md">
-              <div class="absolute left-3 bottom-3">
-                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                  DTF Ultra Violeta — $400 m/l
-                </span>-->
-              </div>
+                   class="block w-full h-auto object-contain object-center rounded-xl shadow-md bg-white/10" />
             </button>
 
-            <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
-                    data-img="img/promocion/4.jpg"
+            <!-- Slide 3 -->
+            <button class="hero-slide w-full flex-none relative focus:outline-none flex items-center justify-center cursor-pointer"
+                    data-img="img/promocion/Copias.jpg"
                     data-msg="Hola 👋, me interesan las promos de *Copias B/N, Bordados y Grabado Láser*. ¿Me comparten precios y tiempos?">
               <img src="img/promocion/Copias.jpg" alt="Copias B/N, Bordados, Grabado Láser"
-                   class="w-full h-full object-cover rounded-xl shadow-md">
-              <div class="absolute left-3 bottom-3">
-                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                  Copias B/N • Bordados • Láser
-                </span>-->
-              </div>
+                   class="block w-full h-auto object-contain object-center rounded-xl shadow-md bg-white/10" />
             </button>
 
-            <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
-                    data-img="img/promocion/5.jpg"
+            <!-- Slide 4 -->
+            <button class="hero-slide w-full flex-none relative focus:outline-none flex items-center justify-center cursor-pointer"
+                    data-img="img/promocion/Banderas.jpg"
                     data-msg="Hola 👋, me interesa *Banderas 3 m — $600*. ¿Modelos disponibles y tiempos de entrega?">
               <img src="img/promocion/Banderas.jpg" alt="Banderas 3 m $600"
-                   class="w-full h-full object-cover rounded-xl shadow-md">
-              <div class="absolute left-3 bottom-3">
-                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                  Banderas 3 m — $600
-                </span>-->
-              </div>
+                   class="block w-full h-auto object-contain object-center rounded-xl shadow-md bg-white/10" />
             </button>
 
-            <button class="hero-slide w-full h-full flex-shrink-0 relative focus:outline-none flex items-center justify-center cursor-pointer"
-                    data-img="img/impresion-digital.jpg"
+            <!-- Slide 5 -->
+            <button class="hero-slide w-full flex-none relative focus:outline-none flex items-center justify-center cursor-pointer"
+                    data-img="img/promocion/DTF textil.jpg"
                     data-msg="Hola 👋, me interesa *DTF Textil — $200 m/l*. ¿Requisitos del archivo y acabados disponibles?">
               <img src="img/promocion/DTF textil.jpg" alt="DTF Textil $200 m/l"
-                   class="w-full h-full object-cover rounded-xl shadow-md">
-              <div class="absolute left-3 bottom-3">
-                <!--<span class="inline-block bg-white/90 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full shadow">
-                  DTF Textil — $200 m/l
-                </span>-->
-              </div>
+                   class="block w-full h-auto object-contain object-center rounded-xl shadow-md bg-white/10" />
             </button>
-
           </div>
 
-          <!-- Controles -->
-<button id="hero-prev"
-        class="absolute left-3 top-1/2 -translate-y-1/2 
-               bg-white/80 hover:bg-white/90 text-gray-800 
-               w-9 h-9 rounded-full flex items-center justify-center 
-               shadow-sm ring-1 ring-black/10 
-               transition-opacity duration-300 opacity-80">
-  <i class="fas fa-chevron-left"></i>
-</button>
-
-<button id="hero-next"
-        class="absolute right-3 top-1/2 -translate-y-1/2 
-               bg-white/80 hover:bg-white/90 text-gray-800 
-               w-9 h-9 rounded-full flex items-center justify-center 
-               shadow-sm ring-1 ring-black/10 
-               transition-opacity duration-300 opacity-80">
-  <i class="fas fa-chevron-right"></i>
-</button>
-
+          <!-- Controles (se centran porque el alto es el de la imagen) -->
+          <button id="hero-prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 text-gray-800 w-9 h-9 rounded-full flex items-center justify-center shadow-sm ring-1 ring-black/10 transition-opacity duration-300 opacity-80">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="hero-next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 text-gray-800 w-9 h-9 rounded-full flex items-center justify-center shadow-sm ring-1 ring-black/10 transition-opacity duration-300 opacity-80">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
 
         <!-- Dots -->
@@ -230,8 +168,6 @@
     </div>
   </div>
 </section>
-
-
 
   <!-- Servicios -->
 <section id="servicios" class="py-16 bg-white">
@@ -251,40 +187,68 @@
   </div>
 </section>
 
-<!-- ✅ Modal reutilizable (no cambia: el JS lo rellena/abre/cierra) -->
-<div id="service-modal" class="fixed inset-0 z-[70] hidden items-center justify-center">
+
+<!-- ✅ Modal reutilizable (IDs iguales, scroll fluido) -->
+<div id="service-modal"
+     class="fixed inset-0 z-[70] hidden flex items-center justify-center overscroll-contain">
   <!-- Backdrop -->
   <button id="modal-backdrop" class="absolute inset-0 bg-black/50" aria-label="Cerrar modal"></button>
 
   <!-- Caja modal -->
-  <div class="relative bg-white rounded-2xl shadow-2xl max-w-md lg:max-w-sm w-[90%] p-5 md:p-6"
+<!-- Caja modal -->
+<div class="relative bg-white rounded-2xl shadow-2xl
+            w-[min(90vw,520px)] max-h-[90vh]
+            overflow-hidden p-0 flex flex-col overscroll-contain">
 
-       role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button id="modal-close"
-            class="absolute -top-3 -right-3 bg-white rounded-full shadow px-3 py-1 text-sm font-semibold">✕</button>
-
-    <img id="modal-img" class="w-full rounded-xl max-h-[380px] lg:max-h-[320px] object-contain mx-auto" alt="">
-    <h3 id="modal-title" class="text-2xl font-bold mt-4"></h3>
+  <!-- Header (sticky) -->
+  <div class="sticky top-0 z-10 bg-white px-5 pt-4 pb-3 border-b border-gray-200 shadow-sm">
+    <div class="flex items-start gap-4">
+      <h3 id="modal-title" class="text-xl md:text-2xl font-bold flex-1"></h3>
+      <button id="modal-close"
+              class="shrink-0 inline-flex items-center justify-center
+                     w-9 h-9 rounded-full border hover:bg-gray-50 text-gray-600"
+              aria-label="Cerrar">✕</button>
+    </div>
     <p id="modal-medidas" class="text-sm text-gray-600 mt-1 hidden"></p>
+  </div>
 
-    <!-- Lista de aplicaciones (solo para tipo completo) -->
-    <div id="modal-apps" class="mt-3 hidden">
+  <!-- Body (ÚNICO que scrollea) -->
+  <div class="flex-1 overflow-y-auto px-5 pt-4 pb-5">
+    <img id="modal-img"
+         class="block mx-auto h-auto w-auto
+                max-w-[80%] sm:max-w-[70%] md:max-w-[60%]
+                max-h-[50vh] md:max-h-[45vh]
+                object-contain rounded-xl shadow-md bg-white/10"
+         alt="">
+
+    <div id="modal-apps" class="mt-4 hidden">
       <h4 class="font-semibold">Aplicaciones</h4>
       <ul id="modal-apps-list" class="list-disc pl-5 space-y-1 mt-1 text-gray-700"></ul>
     </div>
 
-    <!-- Descripción breve (solo para tipo breve) -->
-    <p id="modal-desc" class="mt-3 text-gray-700 hidden"></p>
+    <p id="modal-desc" class="mt-4 text-gray-700 hidden"></p>
+  </div>
 
-    <!-- Acciones -->
-    <div class="mt-5 flex flex-col sm:flex-row gap-3">
+  <!-- Footer (sticky) -->
+  <div class="sticky bottom-0 z-10 bg-white/95 backdrop-blur px-5 py-4 border-t border-gray-200"
+       style="padding-bottom: calc(1rem + env(safe-area-inset-bottom));">
+    <div class="flex flex-col sm:flex-row gap-3">
       <a id="modal-wa" target="_blank"
-         class="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold bg-green-600 text-white hover:bg-green-700 transition">WhatsApp</a>
+         class="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold bg-green-600 text-white hover:bg-green-700 transition">
+        WhatsApp
+      </a>
       <a id="modal-call"
-         class="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold border border-gray-300 hover:bg-gray-50 transition">Llamar</a>
+         class="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold border border-gray-300 hover:bg-gray-50 transition">
+        Llamar
+      </a>
     </div>
   </div>
 </div>
+
+
+</div>
+
+
 
 <!-- ✅ Asegúrate de cargar el JS al final del body -->
 <!-- <script src="js/services.js" defer></script> -->
