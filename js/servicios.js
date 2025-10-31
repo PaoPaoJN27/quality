@@ -37,7 +37,7 @@ const SERVICES = [
     medidas:"Hasta 300 cm de ancho", aplicaciones:["Lona publicitaria","Lona traslúcida","Promociones","Colgantes con ojillos"] },
   { slug:"impresion-dtf-uv", nombre:"IMPRESIÓN DTF UV", imagen:"Impresion DTF UV.jpg", tipoModal:"completo",
     medidas:"Metro lineal (58 cm × 100 cm)", aplicaciones:["Fundas de teléfono","Tazas y termos","Cajas de cartón","Accesorios","Artículos decorativos","Plásticos","Automóviles"] },
-  { slug:"corte-laser", nombre:"CORTE LÁSER", imagen:"Corte Laser2.jpg", tipoModal:"completo",
+  { slug:"corte-laser", nombre:"CORTE LÁSER", imagen:"Corte laser.jpg", tipoModal:"completo",
     medidas:"Material/espesor compatibles", aplicaciones:["Corte y grabado acrílico","Cajas y figuras MDF","Llaveros","Decoraciones","Trofeos","Reconocimientos"] },
   { slug:"grabado-laser", nombre:"GRABADO LÁSER", imagen:"Grabado laser.jpg", tipoModal:"completo",
     medidas:"Área útil según pieza", aplicaciones:["Grabado de termos","Cajas y figuras MDF","Llaveros","Decoraciones","Trofeos","Reconocimientos"] },
