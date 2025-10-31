@@ -39,7 +39,7 @@ const SERVICES = [
     medidas:"Metro lineal (58 cm × 100 cm)", aplicaciones:["Fundas de teléfono","Tazas y termos","Cajas de cartón","Accesorios","Artículos decorativos","Plásticos","Automóviles"] },
   { slug:"corte-laser", nombre:"CORTE LÁSER", imagen:"Corte laser.jpg", tipoModal:"completo",
     medidas:"Material/espesor compatibles", aplicaciones:["Corte y grabado acrílico","Cajas y figuras MDF","Llaveros","Decoraciones","Trofeos","Reconocimientos"] },
-  { slug:"grabado-laser", nombre:"GRABADO LÁSER", imagen:"Grabado laser.jpg", tipoModal:"completo",
+  { slug:"grabado-laser", nombre:"GRABADO LÁSER", imagen:"Grabado_Laser.jpg", tipoModal:"completo",
     medidas:"Área útil según pieza", aplicaciones:["Grabado de termos","Cajas y figuras MDF","Llaveros","Decoraciones","Trofeos","Reconocimientos"] },
   { slug:"viniles", nombre:"VINILES", imagen:"Viniles.png", tipoModal:"completo",
     medidas:"Corte y/o impresión", aplicaciones:["Vinil impreso","Vinil transparente","Etiquetas y stickers","Decoración de vidrios","Señalética"] },
