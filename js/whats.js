@@ -1,34 +1,17 @@
 (() => {
   const PHONE = "528281188792"; // MX sin '+'
-  const PUBLIC_BASE_URL = "https://paopaojn27.github.io/quality/img/promocion/"; // ✅ dominio real (termina con /)
   let lastOpen = 0;
-
-  const isHttp = (u) => /^https?:\/\//i.test(u);
-
-  function toAbs(path) {
-    if (!path) return "";
-    try {
-      if (PUBLIC_BASE_URL) return new URL(path, PUBLIC_BASE_URL).href;
-      if (isHttp(location.origin)) return new URL(path, location.origin + "/").href;
-      return "";
-    } catch { return ""; }
-  }
 
   const BASE_MESSAGE =
     "Hola 👋, me interesa la promoción *{nombre}*. ¿Podrían darme más información y ejemplos?";
 
-  // === Opción A: abrir WhatsApp EN LA MISMA PESTAÑA ===
-  function openWhatsApp(nombrePromo, imgSrc = "") {
+  // === WhatsApp SOLO TEXTO ===
+  function openWhatsAppText(text) {
     const now = Date.now();
-    if (now - lastOpen < 900) return; // evita doble clic rápido
+    if (now - lastOpen < 900) return; // evita doble clic
     lastOpen = now;
 
-    const imgUrl = toAbs(imgSrc);
-    const msg = BASE_MESSAGE.replace("{nombre}", nombrePromo);
-    const text = imgUrl ? `${msg}\n${imgUrl}` : msg;
-    const t = encodeURIComponent(text);
-
-    // usamos wa.me directamente en la misma pestaña
+    const t = encodeURIComponent(text || "Hola 👋");
     const url = `https://wa.me/${PHONE}?text=${t}`;
     window.location.assign(url);
   }
@@ -66,9 +49,8 @@
   if ($prev) $prev.addEventListener("click", prev);
   $dots.forEach((dot,i) => dot.addEventListener("click", () => goTo(i)));
 
-  // Click en slide → usa nombre + URL absoluta de imagen
+  // Click en slide → usa data-msg o mensaje base (SIN imagen)
   $slides.forEach(slide => {
-    // Asegura que un <button> no haga submit si estuviera dentro de un <form>
     try { slide.setAttribute("type", "button"); } catch {}
 
     const handler = () => {
@@ -76,8 +58,11 @@
         slide.querySelector("span")?.innerText?.trim() ||
         slide.querySelector("img")?.alt?.trim() ||
         "Promoción";
-      const imgSrc = slide.querySelector("img")?.getAttribute("src") || "";
-      openWhatsApp(nombre, imgSrc);
+
+      const custom = (slide.dataset && slide.dataset.msg) ? String(slide.dataset.msg).trim() : "";
+      const text = custom || BASE_MESSAGE.replace("{nombre}", nombre);
+
+      openWhatsAppText(text);
     };
 
     slide.addEventListener("click", (e) => {
@@ -110,8 +95,4 @@
 
   goTo(0);
   start();
-})();
-
-  
-
-
+})()
